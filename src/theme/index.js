@@ -35,6 +35,13 @@ export default createMuiTheme({
                 }
             }
         },
+        MuiCard: {
+            root: {
+                background: colors.hover,
+                minHeight: 250,
+                padding: "0px 20px"
+            }
+        },
         MuiDrawer: {
             paper: {
                 background: colors.main

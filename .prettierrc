@@ -1,6 +1,5 @@
 {
     "printWidth": 100,
-    "parser": "flow",
     "singleQuote": false,
     "tabWidth": 4,
     "trailingComma": "none"

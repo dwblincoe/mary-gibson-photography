@@ -8,7 +8,9 @@ export default withStyles((theme) => {
             width: "100vw",
             height: "60px",
             display: "flex",
-            justifyContent: "space-between"
+            justifyContent: "space-between",
+            position: "fixed",
+            zIndex: 500
         },
         mainColor: {
             background: colors.main
