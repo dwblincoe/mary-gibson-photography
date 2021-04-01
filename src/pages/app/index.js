@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import { FormspreeProvider } from "@formspree/react";
 
 import Home from "../home";
 import Gallery from "../gallery";
@@ -24,15 +23,13 @@ const App = ({ classes, history }) => {
 
             <div className={classes.container}>
                 <Navbar isHome={isHome} />
-                <FormspreeProvider project="1623100352146440098">
-                    <Switch>
-                        <Route exact path="/" component={Home} />
-                        <Route path="/gallery" component={Gallery} />
-                        <Route path="/pricing-info" component={PricingInfo} />
-                        <Route path="/meet" component={Meet} />
-                        <Route path="/contact" component={Contact} />
-                    </Switch>
-                </FormspreeProvider>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/gallery" component={Gallery} />
+                    <Route path="/pricing-info" component={PricingInfo} />
+                    <Route path="/meet" component={Meet} />
+                    <Route path="/contact" component={Contact} />
+                </Switch>
             </div>
         </div>
     );

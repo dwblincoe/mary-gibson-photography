@@ -5,7 +5,8 @@ export default withStyles((theme) => {
 
     return {
         container: {
-            marginTop: "90px"
+            marginTop: "90px",
+            width: "100vw"
         },
         formContainer: {
             display: "flex",

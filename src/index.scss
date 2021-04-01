@@ -1,4 +1,5 @@
 @import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import "~react-toastify/dist/ReactToastify.min.css";
 
 .image-gallery-slide img {
     width: 100%;
@@ -18,4 +19,17 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.mt-2 {
+    margin-top: 20px !important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
 }

@@ -9,7 +9,7 @@ export default withStyles((theme) => {
 
     return {
         container: {
-            padding: "20px 20%",
+            paddingTop: "20px",
             marginTop: "60px",
             position: "relative",
 
@@ -36,15 +36,15 @@ export default withStyles((theme) => {
         },
         miscImg: {
             background: `url(${misc})`,
-            backgroundPosition: "0% 25%"
+            backgroundPosition: "50% 25%"
         },
         pregnancyImg: {
             background: `url(${pregnancy})`,
-            backgroundPosition: "0% 25%"
+            backgroundPosition: "50% 25%"
         },
         babyImg: {
             background: `url(${baby})`,
-            backgroundPosition: "0% 50%"
+            backgroundPosition: "50% 50%"
         },
         imgContainer: {
             backgroundSize: "cover",

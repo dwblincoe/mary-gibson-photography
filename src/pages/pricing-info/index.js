@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, List, ListItem, ListSubheader } from "@material-ui/core";
+import { Grid, Typography, List, ListItem, ListSubheader, Hidden } from "@material-ui/core";
 
 import withStyles from "./styles";
 
@@ -69,7 +69,7 @@ const PricingInfo = ({ classes }) => {
     const renderSessionCard = (session) => (
         <Grid item sm={12} className={classes.cardContainer}>
             <List>
-                <ListSubheader>
+                <ListSubheader disableSticky>
                     <Typography variant="h6" color="textSecondary" className={classes.subtitle}>
                         {session.title}
                     </Typography>
@@ -120,21 +120,22 @@ const PricingInfo = ({ classes }) => {
     };
 
     return (
-        <Grid container className={classes.container}>
-            {renderLinks()}
-            <Grid item xs={12} id="pregnancy">
+        <Grid container alignItems="center" direction="column" className={classes.container}>
+            <Hidden mdDown>{renderLinks()}</Hidden>
+
+            <Grid item xs={12} md={10} lg={8} id="pregnancy" className="w-100">
                 <Typography variant="h5">Pregnancy Photoshoots</Typography>
                 <div className={`${classes.imgContainer} ${classes.pregnancyImg}`}></div>
                 <Grid container>
                     {pregnancySessions.map((session) => renderSessionCard(session))}
                 </Grid>
             </Grid>
-            <Grid item xs={12} id="baby">
+            <Grid item xs={12} md={10} lg={8} id="baby" className="w-100">
                 <Typography variant="h5">Babies and Tots Photoshoots</Typography>
                 <div className={`${classes.imgContainer} ${classes.babyImg}`}></div>
                 <Grid container>{babySessions.map((session) => renderSessionCard(session))}</Grid>
             </Grid>
-            <Grid item xs={12} id="misc">
+            <Grid item xs={12} md={10} lg={8} id="misc" className="w-100">
                 <Typography variant="h5">Miscellaneous Photoshoots</Typography>
                 <div className={`${classes.imgContainer} ${classes.miscImg}`}></div>
                 <Grid container>{miscSessions.map((session) => renderSessionCard(session))}</Grid>
